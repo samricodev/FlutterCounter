@@ -18,6 +18,9 @@ class _CounterScreenState extends State<CounterScreen> {
 
   void decrement() {
     setState(() {
+      if (counter == 0) {
+        return;
+      }
       counter--;
     });
   }
